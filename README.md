@@ -1,0 +1,55 @@
+# LIN
+
+这是一个以 Markdown 为内容源的个人知识库，页面采用克制的 wiki 风格：白色背景、优雅的衬线字体、蓝色链接、清晰的层级和尽量少的装饰。
+
+## 本地开发
+
+```bash
+bun install
+bun run dev
+```
+
+启动后访问 <http://127.0.0.1:3001>。生产构建使用：
+
+```bash
+bun run build
+```
+
+静态文件会生成到 `out/`，GitHub Actions 会将它部署到 GitHub Pages。
+
+## 添加文档
+
+所有文章放在 `content/` 下，支持任意层级的文件夹和 `.md` 文件：
+
+```text
+content/
+├── README.md
+├── notes/
+│   └── writing.md
+└── topics/
+    └── article.md
+```
+
+文件夹会自动出现在左侧目录树中，Markdown 文件会自动生成对应的文章页面。文章中的第一个一级标题会作为页面标题；二级和三级标题会自动生成文章右侧目录。
+
+可以在 Markdown 文件开头添加可选的 `date` 字段，用来控制同一文件夹内的文章顺序：
+
+```md
+---
+date: 2026-09-13
+---
+# 一篇文章
+```
+
+有时间的文章按最新到最旧排列；没有填写时间或日期格式不合法的文章排在最后。支持 `2026-09-13` 和 `2026-09-13 14:30` 这样的值。
+
+支持标题、段落、列表、引用、代码块、行内代码、链接、图片、标准 Markdown 表格、行内公式和多行 KaTeX 数学公式。正文图片会保持较大的展示尺寸，背景图不会被用于页面装饰。
+
+图片资源放在 `public/` 下，例如 `public/images/figure.png`，然后在 Markdown 中写 `![示意图](images/figure.png)`；从 Obsidian 复制的 `![[figure.png]]` 语法也可以直接使用。构建时会自动为生产环境补上 `/lin` 前缀；页面品牌显示为 `LIN`。
+
+## 在线地址
+
+- 仓库：<https://github.com/TTAWDTT/lin>
+- GitHub Pages：<https://ttawdtt.github.io/lin/>
+
+推送到 `main` 分支，或在 Actions 中手动运行 `Deploy LIN to GitHub Pages`，即可触发部署。
