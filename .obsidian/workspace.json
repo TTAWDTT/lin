@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/我所喜欢的林老师.md",
+                "file": "content/一些有意思的统计.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "我所喜欢的林老师"
+              "title": "一些有意思的统计"
             }
           }
         ]
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eab814f5d94ea9b4",
@@ -190,7 +191,8 @@
   },
   "active": "7658d637d21ae616",
   "lastOpenFiles": [
-    "README.md",
-    "content/我所喜欢的林老师.md"
+    "content/我所喜欢的林老师.md",
+    "content/一些有意思的统计.md",
+    "README.md"
   ]
 }
