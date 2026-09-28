@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eab814f5d94ea9b4",
@@ -188,7 +189,7 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b938a60e974e4368",
+  "active": "7658d637d21ae616",
   "lastOpenFiles": [
     "content/我所喜欢的林老师.md",
     "content/一些有意思的统计.md",
